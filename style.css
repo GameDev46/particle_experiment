@@ -1,0 +1,270 @@
+html {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	touch-action: none;
+	webkit-user-select: none;
+	webkit-touch-callout: none;
+	user-select: none;
+	--webFont: "Montserrat";
+}
+
+canvas {
+	position: absolute;
+	touch-action: none;
+	webkit-user-select: none;
+	webkit-touch-callout: none;
+	user-select: none;
+	margin: none;
+	padding: none;
+	top: 0;
+	left: 0;
+}
+
+.options {
+	position: absolute;
+	width: 200px;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	top: 10px;
+	left: 10px;
+}
+
+.options>h2 {
+	margin-top: 20px;
+	padding: 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 100;
+	font-size: 12px;
+	letter-spacing: 1px;
+	line-height: 12px;
+	color: rgb(255, 255, 255);
+	margin-bottom: 10px;
+}
+
+.options>select {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 100;
+	font-size: 14px;
+	letter-spacing: 1px;
+	color: rgb(255, 255, 255);
+	width: 200px;
+	height: 30px;
+	padding: 0;
+	padding-left: 5px;
+	background: #131313;
+	outline: none;
+	border: 1px solid rgb(107, 107, 189);
+	;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+.options>input {
+	-webkit-appearance: none;
+	appearance: none;
+	position: relative;
+	width: 200px;
+	height: 10px;
+	outline: none;
+	border-radius: 2px;
+	background: rgba(255, 255, 255, 0);
+	border: 1px solid rgb(107, 107, 189);
+}
+
+.options>input::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 30px;
+	height: 10px;
+	min-height: 10px;
+	background: rgb(150, 150, 255);
+	cursor: pointer;
+	border-radius: 2px;
+}
+
+.options>button {
+	position: relative;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 100;
+	font-size: 14px;
+	letter-spacing: 1px;
+	color: rgb(255, 255, 255);
+	width: 200px;
+	height: 40px;
+	padding: 0;
+	padding-left: 5px;
+	background: rgb(107, 107, 189);
+	backdrop-filter: blur(5px);
+	outline: none;
+	border: none;
+	box-shadow: 0 5px 0 rgb(78, 78, 131);
+	border-radius: 2px;
+	cursor: pointer;
+	transition: 0.1s linear;
+}
+
+.options>button:hover {
+	box-shadow: 0 2px 0 rgb(78, 78, 131);
+	transform: translateY(3px);
+}
+
+.options>.inlineContent {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+
+.options>.inlineContent>button {
+	position: relative;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 100;
+	font-size: 14px;
+	letter-spacing: 1px;
+	color: rgb(255, 255, 255);
+	width: 200px;
+	height: 40px;
+	padding: 0;
+	padding-left: 5px;
+	background: rgb(107, 107, 189);
+	backdrop-filter: blur(5px);
+	outline: none;
+	border: none;
+	box-shadow: 0 5px 0 rgb(78, 78, 131);
+	border-radius: 2px;
+	cursor: pointer;
+	transition: 0.1s linear;
+}
+
+.options>.inlineContent>button:hover {
+	box-shadow: 0 2px 0 rgb(78, 78, 131);
+	transform: translateY(3px);
+}
+
+.options>.inlineContent>button>svg {
+	fill: rgb(255, 255, 255);
+	width: 15px;
+}
+
+#resetMatrix {
+	background: rgb(240, 107, 107);
+	box-shadow: 0 5px 0 rgb(154, 76, 76);
+}
+
+#resetMatrix:hover {
+	box-shadow: 0 3px 0 rgb(154, 76, 76);
+}
+
+#clearMatrix {
+	background: rgb(240, 107, 107);
+	box-shadow: 0 5px 0 rgb(154, 76, 76);
+}
+
+#clearMatrix:hover {
+	box-shadow: 0 3px 0 rgb(154, 76, 76);
+}
+
+#randomiseMatrix {
+	background: rgb(75, 160, 107);
+	box-shadow: 0 5px 0 rgb(62, 116, 83);
+}
+
+#randomiseMatrix:hover {
+	box-shadow: 0 3px 0 rgb(62, 116, 83);
+}
+
+#reset {
+	background: rgb(76, 76, 123);
+	box-shadow: 0 5px 0 rgb(48, 48, 74);
+}
+
+#reset:hover {
+	box-shadow: 0 2px 0 rgb(48, 48, 74);
+}
+
+.options>.matrix {
+	position: absolute;
+	width: auto;
+	top: 200px;
+	left: 230px;
+	border: 2px solid rgb(107, 107, 189);
+	border-radius: 2px;
+	height: auto;
+	padding: 10px;
+	display: grid;
+	grid-template-rows: repeat(6, auto);
+	grid-template-columns: repeat(6, auto);
+	grid-gap: 5px;
+	transform: scale(0);
+	transition: 0.2s linear;
+	backdrop-filter: blur(5px);
+}
+
+.options>.matrix>input {
+	position: relative;
+	width: 25px;
+	height: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
+	outline: none;
+	border-radius: 2px;
+	background: rgba(255, 255, 255, 0);
+	border: 1px solid rgb(107, 107, 189);
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 100;
+	font-size: 14px;
+	letter-spacing: 1px;
+	text-align: center;
+	color: rgb(255, 255, 255);
+	cursor: text;
+}
+
+.options>.matrix>h1 {
+	grid-column: 1 / span 6;
+	width: auto;
+	padding: 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 100;
+	text-decoration: underline;
+	font-size: 15px;
+	letter-spacing: 1px;
+	line-height: 12px;
+	color: rgb(255, 255, 255);
+	margin-bottom: 10px;
+}
+
+.options>.matrix>h2 {
+	width: auto;
+	padding: 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 100;
+	font-size: 12px;
+	letter-spacing: 1px;
+	line-height: 12px;
+	color: rgb(255, 255, 255);
+	margin-bottom: 10px;
+}
+
+.options>.matrix>.noInput {
+	position: relative;
+	width: 25px;
+	min-width: 25px;
+	height: 30px;
+	min-height: 35px;
+	background: rgba(190, 50, 50, 0);
+	border: 1px dashed rgb(190, 50, 50);
+	padding-left: 10px;
+	padding-right: 10px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 100;
+	font-size: 14px;
+	letter-spacing: 1px;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	border-radius: 2px;
+	cursor: not-allowed;
+}

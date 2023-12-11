@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Attraction Experiment</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<script src="https://unpkg.com/feather-icons"></script>
+
+	<canvas id="scene"></canvas>
+
+	<div class="options">
+
+		<div class="inlineContent">
+			<button id="reset"><i data-feather="rewind"></i></button>
+			<button id="pause"><i data-feather="play"></i></button>
+		</div>
+
+		<h2>Attract:</h2>
+
+		<select id="attractionSelector">
+			<option value="-1" selected>All</option>
+			<option value="0">Red</option>
+			<option value="1">Blue</option>
+			<option value="2">Pink</option>
+			<option value="3">Yellow</option>
+			<option value="4">Green</option>
+		</select>
+
+		<h2>Gravitational Const:</h2>
+
+		<input type="range" id="graviConst" value="0.1" min="-1" max="1" step="0.01">
+
+		<h2>Gravity:</h2>
+
+		<input type="range" id="gravity" value="0" min="-10" max="10" step="0.1">
+
+		<h2>Drag:</h2>
+
+		<input type="range" id="drag" value="4" min="0" max="10" step="0.1">
+
+		<h2>Matrix Options:</h2>
+
+		<select id="matrixSelector">
+			<option value="0">Organisms</option>
+			<option value="1">DNA Formation</option>
+			<option value="2">Movers</option>
+			<option value="3">Chains</option>
+		</select>
+
+		<h2>Particle Matrix:</h2>
+
+		<button id="openMatrix">Open Matrix</button>
+
+		<div class="matrix" id="matrix">
+
+			<h1>Attraction</h1>
+
+			<h2></h2>
+
+			<h2>Green</h2>
+			<h2>Yellow</h2>
+			<h2>Purple</h2>
+			<h2>Blue</h2>
+			<h2>Red</h2>
+
+			<h2>Red</h2>
+			<input type="text" value="1" class="attractMatItem 0-4">
+			<input type="text" value="1" class="attractMatItem 0-3">
+			<input type="text" value="1" class="attractMatItem 0-2">
+			<input type="text" value="1" class="attractMatItem 0-1">
+			<input type="text" value="1" class="attractMatItem 0-0">
+
+			<h2>Blue</h2>
+			<input type="text" value="1" class="attractMatItem 1-4">
+			<input type="text" value="1" class="attractMatItem 1-3">
+			<input type="text" value="1" class="attractMatItem 1-2">
+			<input type="text" value="1" class="attractMatItem 1-1">
+			<input type="text" value="1" class="attractMatItem 1-0">
+
+			<h2>Purple</h2>
+			<input type="text" value="1" class="attractMatItem 2-4">
+			<input type="text" value="1" class="attractMatItem 2-3 ">
+			<input type="text" value="1" class="attractMatItem 2-2">
+			<input type="text" value="1" class="attractMatItem 2-1">
+			<input type="text" value="1" class="attractMatItem 2-0">
+
+			<h2>Yellow</h2>
+			<input type="text" value="1" class="attractMatItem 3-4">
+			<input type="text" value="1" class="attractMatItem 3-3">
+			<input type="text" value="1" class="attractMatItem 3-2">
+			<input type="text" value="1" class="attractMatItem 3-1">
+			<input type="text" value="1" class="attractMatItem 3-0">
+
+			<h2>Green</h2>
+			<input type="text" value="1" class="attractMatItem 4-4">
+			<input type="text" value="1" class="attractMatItem 4-3">
+			<input type="text" value="1" class="attractMatItem 4-2">
+			<input type="text" value="1" class="attractMatItem 4-1">
+			<input type="text" value="1" class="attractMatItem 4-0">
+
+			<h1>Mass</h1>
+
+			<h2></h2>
+			<h2>Green</h2>
+			<h2>Yellow</h2>
+			<h2>Purple</h2>
+			<h2>Blue</h2>
+			<h2>Red</h2>
+
+			<h2></h2>
+			<input type="text" value="1" class="massMatItem 4">
+			<input type="text" value="1" class="massMatItem 3">
+			<input type="text" value="1" class="massMatItem 2">
+			<input type="text" value="1" class="massMatItem 1">
+			<input type="text" value="1" class="massMatItem 0">
+
+		</div>
+
+		<br>
+
+		<button id="randomiseMatrix">Randomise Matrix</button>
+		<br>
+		<button id="resetMatrix">Reset Matrix</button>
+		<br>
+		<button id="clearMatrix">Clear Matrix</button>
+
+	</div>
+
+	<script src="script.js" type="module"></script>
+
+	<script>
+		feather.replace();
+	</script>
+</body>
+
+</html>

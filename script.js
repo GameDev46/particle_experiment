@@ -1,4 +1,4 @@
-import { piCollide } from "/piCollide.js";
+import { piCollide } from "./piCollide.js";
 
 // Setup scene
 

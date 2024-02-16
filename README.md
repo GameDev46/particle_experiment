@@ -1,12 +1,12 @@
 <a href="https://github.com/GameDev46" title="Go to GitHub repo">
-    <img src="https://img.shields.io/static/v1?label=GameDev46&message=Profile&color=Green&logo=github&style=for-the-badge&labelColor=1f1f22" alt="GameDev46 - particle_experiment">
+    <img src="https://img.shields.io/static/v1?label=GameDev46&message=|&color=Green&logo=github&style=for-the-badge&labelColor=1f1f22" alt="GameDev46 - particle_experiment">
     <img src="https://img.shields.io/badge/Version-1.1.7-green?style=for-the-badge&labelColor=1f1f22&color=Green" alt="GameDev46 - particle_experiment">
 </a>
 
 
-![Static Badge](https://img.shields.io/badge/-HTML5-1f1f22?style=for-the-badge&logo=HTML5)
-![Static Badge](https://img.shields.io/badge/-CSS-1f1f22?style=for-the-badge&logo=CSS3&logoColor=6060ef)
-![Static Badge](https://img.shields.io/badge/-JavaScript-1f1f22?style=for-the-badge&logo=JavaScript)
+![Static Badge](https://img.shields.io/badge/--1f1f22?style=for-the-badge&logo=HTML5)
+![Static Badge](https://img.shields.io/badge/--1f1f22?style=for-the-badge&logo=CSS3&logoColor=6060ef)
+![Static Badge](https://img.shields.io/badge/--1f1f22?style=for-the-badge&logo=JavaScript)
     
 <a href="https://github.com/GameDev46/particle_experiment/stargazers">
     <img src="https://img.shields.io/github/stars/GameDev46/particle_experiment?style=for-the-badge&labelColor=1f1f22" alt="stars - particle_experiment">
@@ -17,17 +17,6 @@
 <a href="https://github.com/GameDev46/particle_experiment/issues">
     <img src="https://img.shields.io/github/issues/GameDev46/particle_experiment?style=for-the-badge&labelColor=1f1f22&color=blue"/>
  </a>
-
-<br>
-<br>
-
-<a href="https://github.com/GameDev46/particle_experiment/releases/">
-    <img src="https://img.shields.io/github/tag/GameDev46/particle_experiment?include_prereleases=&sort=semver&color=Green&style=for-the-badge&labelColor=1f1f22" alt="GitHub tag">
-</a>
-
-<a href="https://github.com/GameDev46/particle_experiment/issues">
-    <img src="https://img.shields.io/github/issues/GameDev46/particle_experiment?style=for-the-badge&labelColor=1f1f22" alt="issues - particle_experiment">
-</a>
 
 <br>
 <br>
@@ -47,8 +36,27 @@
 </p>
 
 # particle_experiment
-A program that makes use a few simple attraction and repellence based rules which when applied right cause the emergence of biological looking structures and creatures
 
-# Website
+A program that simulates assymetric attraction and reppelance between particles that cause them to form interesting shapes and patterns
 
-You can run the program in realtime [here, on its website](https://gamedev46.github.io/particle_experiment/) as it is programmed using HTML, CSS and JS
+# Usage
+
+*Gravitational Const* - The strength of the attraction between the particles, the larger the value the faster the particles will accelerate towards each other
+
+*Gravity* - The strength of the attraction between the particles and the ground, I would reccomend leaving this at 0
+
+*Drag* - The energy lost by the particles to frictional forces, this helps to control the particles velocity, the higher it is the more energy is lost by the particles
+
+*Matrix Options* - Loads predefined attraction matrices that I thought had some interesting behaviours
+
+*Open Matrix* - Opens the attraction matrix, this controls how each particle is attracted to every other one (Postive values represent an attraction whereas negative values represent a reppelance). You read the attraction matrix as the top colour causes the left colour to move while it remains stationary
+
+*Randomise Matrix* - Randomises the values in the attraction matrix
+
+*Reset Matrix* - Resets the values in the matrix back to the default values set by the matrix options
+
+*CLear Matrix* - Makes all values in the attraction matrix 0
+
+# Screenshots
+
+<img src="https://github.com/GameDev46/particle_experiment/assets/76485006/7bee0112-e0f5-432c-aa29-2225c62ef375" height="300">
